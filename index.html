@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Restaurant</title>
+    <link rel="stylesheet" href="table.css"
+</head>
+<head>
+
+    <header class="header">
+        <div class="logo">
+          <a href="index.html" class="logo-img-link">
+            <img src="img/Menu_2_160x160_2x_47218892-16ba-490d-8f6a-2d602661e75f_800x.webp" alt="logo" class="logo-img" />
+          </a>
+          <a href="index.html" class="logo-text-link"></a>
+        </div>
+  
+        <nav>
+          <ul class="nav-lists">
+            <li>
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </nav>
+
+
+    <table class="food-table">
+      <thead>
+        <tr>
+          <th>Food ID</th>
+          <th>Food Name</th>
+          <th>Food Type</th>
+          <th>Food Price</th>
+        </tr>
+      </thead>
+
+      <tbody id="foodTable"></tbody>
+    </table>
+
+
+
+<form id="formID">
+    <label for="name of food">name of food</label>
+    <input type="text"name="name of food" id="nameFood">
+    <select name="food" id="foodid">
+        <option value="Fruit and vegetables"id="option1">Fruit and vegetables</option>
+        <option value="Starchy food"id="option2">Starchy food</option>
+        <option value="Dairy"id="option3">Dairyl</option>
+        <option value="Protein"id="option4">Protein</option>
+        <option value="fat"id="option5">fat</option>
+    <select>
+        <label for="price">price</label>
+  <input type="number" id="price" name="price" min="1" max="20">
+</select>
+</select>
+    
+</br>
+    <input type="submit" value="ssubmit">
+    <label for="submit"></label>
+</form>
+<footer>
+    <p>
+        © Copyright 2022 Ahmed Awamleh. All Rights Reserved.
+      </p>
+</footer>
+
+    <script src="event.js"></script>
+</body>
+</html>

@@ -21,34 +21,9 @@ function Food(foodID,foodName,foodtype,price,){
 
 
 
-
-// method to print the name drink and the price
-Food.prototype.printFood = function () {
-    // 1. create Element
-    const pEl = document.createElement("p");
-    // 2. add content or attributes 
-    pEl.textContent = `${this.foodID} : ${this.price} JD`;
-    // 3. append to the DOM
-    parentEl.appendChild(pEl);
-
-
-    
-}
-
-for (let i = 0; i < AllFood.length; i++){
-    AllFood[i].printFood();
-}
-
 const formEl=document.getElementById("formID");
 formEl.addEventListener("submit",handlelSubmit);
 
-function id(){
-   
-    var result= Math.floor(Math.random() * 10) + 1;
-    console.log(result);
-    document.write(result);
-
-}
 
 
 function handlelSubmit(event){
@@ -57,12 +32,14 @@ const typeOfFood=event.target.foodid.value
 const namefood=event.target.nameFood.value
 const pricee=event.target.price.value
 
-console.log(typeOfFood,namefood,pricee,);
+
 
 
 event.preventDefault();
 const newFood=new Food (this.foodID,namefood,typeOfFood,pricee)
 newFood.render();
+saveData();
+console.log(ID,namefood,typeOfFood,pricee)
 }
 
 Food.prototype.render = function () {
@@ -77,3 +54,13 @@ Food.prototype.render = function () {
     perentEl.appendChild(trEl)
    
   };
+
+
+  //save my data to local storage
+function saveData(){
+  let strifyeData=JSON.stringify(AllFood)
+  localStorage.setItem("food",strifyeData)
+}
+
+
+
